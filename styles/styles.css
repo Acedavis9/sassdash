@@ -1,0 +1,20 @@
+header {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+header button {
+  background: rgb(129, 103, 202);
+}
+header button:hover {
+  background: red;
+}
+
+header button {
+  background: rgb(129, 103, 202);
+}
+
+.contact button {
+  background: rgb(129, 103, 202);
+}/*# sourceMappingURL=styles.css.map */
