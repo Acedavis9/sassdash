@@ -5,6 +5,24 @@ img {
   height: auto;
 }
 
+.omori {
+  padding-top: 100px;
+}
+
+@font-face {
+  font-family: omorif;
+  src: url(../OMORI_GAME2.ttf);
+}
+* {
+  font-family: omorif;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: myFirstFont;
+  color: darkgreen;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -15,23 +33,51 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #549af0;
+  background-color: #3566a1;
   border: #E36588 solid 4px;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
 }
-header a {
+.sidebar ul li a, header a {
   color: black;
   text-decoration: none;
   margin: 0 10px;
 }
-header a:hover {
+.sidebar ul li a:hover, header a:hover {
   text-decoration: underline;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   background-color: #9A275A;
   padding: 20px;
-  margin: 0 auto;
+  display: flex;
+}
+
+.sidebar {
+  background-color: #3566a1;
+  color: #ecf0f1;
+  width: 150px;
+  height: 100vh;
+  padding: 20px;
+  border: #E36588 solid 4px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+.sidebar h2 {
+  margin-top: 0;
+  color: #ecf0f1;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li {
+  margin: 10px 0;
 }/*# sourceMappingURL=styles.css.map */

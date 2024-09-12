@@ -1,10 +1,29 @@
 $primaryBck : #9A275A;
 $primaryDivs : #E36588;
-$primaryBorders: #549af0;
+$primaryBorders: #3566a1;
 $textColor : black;
+$sidebar-bg: #2c3e50;
+$sidebar-text: #ecf0f1;
+$link-color: #3498db;
+$link-hover-color: #2980b9;
+$content-bg: #ecf0f1;
+$content-padding: 20px;
 
 @import 'images';
 
+@font-face {
+    font-family: omorif;
+    src: url(../OMORI_GAME2.ttf);
+}
+* {
+    font-family: omorif;
+    font-size: 40px;
+}
+  
+h2 {
+    font-family: myFirstFont;
+    color: darkgreen;
+}
 body {
     margin: 0;
     padding: 0;
@@ -21,19 +40,61 @@ header {
     width: 100%;
     box-sizing: border-box;
     a {
+    @extend %text-behavior;
+    }
+}
+%text-behavior {
     color: black;
     text-decoration: none;
     margin: 0 10px;
     &:hover {
     text-decoration: underline;
         }
-    }
-
 }
-
+%flex-property {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .container {
     background-color: $primaryBck;
     padding: 20px;
-    margin: 0 auto;
+    display: flex;
 }
+@mixin box-shadow($x: 0, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, 0.2)) {
+    box-shadow: $x $y $blur $color;
+  }
+  
+
+.sidebar {
+    @extend %flex-property;
+    background-color: $primaryBorders;
+    color: $sidebar-text;
+    width: 150px;
+    height: 100vh;
+    padding: 20px;
+    border: $primaryDivs solid 4px;
+
+    
+    @include box-shadow(2px, 0, 10px, rgba(0, 0, 0, 0.1));
+    h2 {
+        margin-top: 0;
+        color: $sidebar-text;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    
+        li {
+          margin: 10px 0;
+    
+          a {
+            @extend %text-behavior;
+          }
+        }
+      }
+    }
+
 
