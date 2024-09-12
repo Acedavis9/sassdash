@@ -1,22 +1,39 @@
-$primaryBtn : rgb(129, 103, 202);
+$primaryBck : #9A275A;
+$primaryDivs : #E36588;
+$primaryBorders: #549af0;
 $textColor : black;
+
+@import 'images';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 header {
-    background: lightblue;
     display: flex;
     justify-content: center;
-    color: $textColor;
-    button{
-        background: $primaryBtn;
-        &:hover {
-            background: red;
+    align-items: center;
+    background-color: $primaryBorders; 
+    border: $primaryDivs solid 4px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    &:hover {
+    text-decoration: underline;
         }
     }
+
 }
 
-header button {
-    background: $primaryBtn;
+.container {
+    background-color: $primaryBck;
+    padding: 20px;
+    margin: 0 auto;
 }
 
-.contact button {
-    background: $primaryBtn;
-}
